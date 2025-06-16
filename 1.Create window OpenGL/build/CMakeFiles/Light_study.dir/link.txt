@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/Light_study.dir/link.d CMakeFiles/Light_study.dir/src/main.cpp.o CMakeFiles/Light_study.dir/src/glad.c.o -o Light_study  /usr/lib/libglfw.so.3.4 -lGL -lX11 -lpthread -lXrandr -lXi -ldl

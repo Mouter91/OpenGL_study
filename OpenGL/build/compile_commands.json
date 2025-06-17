@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/artur/OpenGL_study/OpenGL/build",
+  "command": "/usr/bin/c++  -I/home/artur/OpenGL_study/OpenGL/include -I/home/artur/OpenGL_study/OpenGL/src -std=gnu++17 -o CMakeFiles/Light_study.dir/src/main.cpp.o -c /home/artur/OpenGL_study/OpenGL/src/main.cpp",
+  "file": "/home/artur/OpenGL_study/OpenGL/src/main.cpp",
+  "output": "CMakeFiles/Light_study.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/artur/OpenGL_study/OpenGL/build",
+  "command": "/usr/bin/cc  -I/home/artur/OpenGL_study/OpenGL/include -I/home/artur/OpenGL_study/OpenGL/src  -o CMakeFiles/Light_study.dir/src/glad.c.o -c /home/artur/OpenGL_study/OpenGL/src/glad.c",
+  "file": "/home/artur/OpenGL_study/OpenGL/src/glad.c",
+  "output": "CMakeFiles/Light_study.dir/src/glad.c.o"
+},
+{
+  "directory": "/home/artur/OpenGL_study/OpenGL/build",
+  "command": "/usr/bin/c++  -I/home/artur/OpenGL_study/OpenGL/include -I/home/artur/OpenGL_study/OpenGL/src -std=gnu++17 -o CMakeFiles/Light_study.dir/src/shader/shader.cpp.o -c /home/artur/OpenGL_study/OpenGL/src/shader/shader.cpp",
+  "file": "/home/artur/OpenGL_study/OpenGL/src/shader/shader.cpp",
+  "output": "CMakeFiles/Light_study.dir/src/shader/shader.cpp.o"
+}
+]

@@ -449,6 +449,7 @@ CMakeFiles/Light_study.dir/src/main.cpp.o: /home/artur/OpenGL_study/OpenGL/src/m
   /usr/include/c++/15.1.1/cstdint \
   /usr/include/c++/15.1.1/cstdio \
   /usr/include/c++/15.1.1/cstdlib \
+  /usr/include/c++/15.1.1/cstring \
   /usr/include/c++/15.1.1/cwchar \
   /usr/include/c++/15.1.1/cwctype \
   /usr/include/c++/15.1.1/debug/assertions.h \
@@ -520,6 +521,7 @@ CMakeFiles/Light_study.dir/src/main.cpp.o: /home/artur/OpenGL_study/OpenGL/src/m
   /usr/include/glm/detail/func_vector_relational.inl \
   /usr/include/glm/detail/qualifier.hpp \
   /usr/include/glm/detail/setup.hpp \
+  /usr/include/glm/detail/type_float.hpp \
   /usr/include/glm/detail/type_half.hpp \
   /usr/include/glm/detail/type_half.inl \
   /usr/include/glm/detail/type_mat2x2.hpp \
@@ -540,6 +542,8 @@ CMakeFiles/Light_study.dir/src/main.cpp.o: /home/artur/OpenGL_study/OpenGL/src/m
   /usr/include/glm/detail/type_mat4x3.inl \
   /usr/include/glm/detail/type_mat4x4.hpp \
   /usr/include/glm/detail/type_mat4x4.inl \
+  /usr/include/glm/detail/type_quat.hpp \
+  /usr/include/glm/detail/type_quat.inl \
   /usr/include/glm/detail/type_vec1.hpp \
   /usr/include/glm/detail/type_vec1.inl \
   /usr/include/glm/detail/type_vec2.hpp \
@@ -549,6 +553,8 @@ CMakeFiles/Light_study.dir/src/main.cpp.o: /home/artur/OpenGL_study/OpenGL/src/m
   /usr/include/glm/detail/type_vec4.hpp \
   /usr/include/glm/detail/type_vec4.inl \
   /usr/include/glm/exponential.hpp \
+  /usr/include/glm/ext/matrix_clip_space.hpp \
+  /usr/include/glm/ext/matrix_clip_space.inl \
   /usr/include/glm/ext/matrix_double2x2.hpp \
   /usr/include/glm/ext/matrix_double2x2_precision.hpp \
   /usr/include/glm/ext/matrix_double2x3.hpp \
@@ -585,32 +591,64 @@ CMakeFiles/Light_study.dir/src/main.cpp.o: /home/artur/OpenGL_study/OpenGL/src/m
   /usr/include/glm/ext/matrix_float4x3_precision.hpp \
   /usr/include/glm/ext/matrix_float4x4.hpp \
   /usr/include/glm/ext/matrix_float4x4_precision.hpp \
+  /usr/include/glm/ext/matrix_projection.hpp \
+  /usr/include/glm/ext/matrix_projection.inl \
+  /usr/include/glm/ext/matrix_transform.hpp \
+  /usr/include/glm/ext/matrix_transform.inl \
+  /usr/include/glm/ext/quaternion_common.hpp \
+  /usr/include/glm/ext/quaternion_common.inl \
+  /usr/include/glm/ext/quaternion_double.hpp \
+  /usr/include/glm/ext/quaternion_double_precision.hpp \
+  /usr/include/glm/ext/quaternion_float.hpp \
+  /usr/include/glm/ext/quaternion_float_precision.hpp \
+  /usr/include/glm/ext/quaternion_geometric.hpp \
+  /usr/include/glm/ext/quaternion_geometric.inl \
+  /usr/include/glm/ext/quaternion_relational.hpp \
+  /usr/include/glm/ext/quaternion_relational.inl \
+  /usr/include/glm/ext/quaternion_transform.hpp \
+  /usr/include/glm/ext/quaternion_transform.inl \
+  /usr/include/glm/ext/quaternion_trigonometric.hpp \
+  /usr/include/glm/ext/quaternion_trigonometric.inl \
+  /usr/include/glm/ext/scalar_constants.hpp \
+  /usr/include/glm/ext/scalar_constants.inl \
   /usr/include/glm/ext/scalar_int_sized.hpp \
   /usr/include/glm/ext/scalar_uint_sized.hpp \
+  /usr/include/glm/ext/vector_bool1.hpp \
+  /usr/include/glm/ext/vector_bool1_precision.hpp \
   /usr/include/glm/ext/vector_bool2.hpp \
   /usr/include/glm/ext/vector_bool2_precision.hpp \
   /usr/include/glm/ext/vector_bool3.hpp \
   /usr/include/glm/ext/vector_bool3_precision.hpp \
   /usr/include/glm/ext/vector_bool4.hpp \
   /usr/include/glm/ext/vector_bool4_precision.hpp \
+  /usr/include/glm/ext/vector_double1.hpp \
+  /usr/include/glm/ext/vector_double1_precision.hpp \
   /usr/include/glm/ext/vector_double2.hpp \
   /usr/include/glm/ext/vector_double2_precision.hpp \
   /usr/include/glm/ext/vector_double3.hpp \
   /usr/include/glm/ext/vector_double3_precision.hpp \
   /usr/include/glm/ext/vector_double4.hpp \
   /usr/include/glm/ext/vector_double4_precision.hpp \
+  /usr/include/glm/ext/vector_float1.hpp \
+  /usr/include/glm/ext/vector_float1_precision.hpp \
   /usr/include/glm/ext/vector_float2.hpp \
   /usr/include/glm/ext/vector_float2_precision.hpp \
   /usr/include/glm/ext/vector_float3.hpp \
   /usr/include/glm/ext/vector_float3_precision.hpp \
   /usr/include/glm/ext/vector_float4.hpp \
   /usr/include/glm/ext/vector_float4_precision.hpp \
+  /usr/include/glm/ext/vector_int1.hpp \
+  /usr/include/glm/ext/vector_int1_sized.hpp \
   /usr/include/glm/ext/vector_int2.hpp \
   /usr/include/glm/ext/vector_int2_sized.hpp \
   /usr/include/glm/ext/vector_int3.hpp \
   /usr/include/glm/ext/vector_int3_sized.hpp \
   /usr/include/glm/ext/vector_int4.hpp \
   /usr/include/glm/ext/vector_int4_sized.hpp \
+  /usr/include/glm/ext/vector_relational.hpp \
+  /usr/include/glm/ext/vector_relational.inl \
+  /usr/include/glm/ext/vector_uint1.hpp \
+  /usr/include/glm/ext/vector_uint1_sized.hpp \
   /usr/include/glm/ext/vector_uint2.hpp \
   /usr/include/glm/ext/vector_uint2_sized.hpp \
   /usr/include/glm/ext/vector_uint3.hpp \
@@ -620,6 +658,17 @@ CMakeFiles/Light_study.dir/src/main.cpp.o: /home/artur/OpenGL_study/OpenGL/src/m
   /usr/include/glm/fwd.hpp \
   /usr/include/glm/geometric.hpp \
   /usr/include/glm/glm.hpp \
+  /usr/include/glm/gtc/constants.hpp \
+  /usr/include/glm/gtc/constants.inl \
+  /usr/include/glm/gtc/epsilon.hpp \
+  /usr/include/glm/gtc/epsilon.inl \
+  /usr/include/glm/gtc/matrix_transform.hpp \
+  /usr/include/glm/gtc/matrix_transform.inl \
+  /usr/include/glm/gtc/quaternion.hpp \
+  /usr/include/glm/gtc/quaternion.inl \
+  /usr/include/glm/gtc/type_ptr.hpp \
+  /usr/include/glm/gtc/type_ptr.inl \
+  /usr/include/glm/gtc/vec1.hpp \
   /usr/include/glm/integer.hpp \
   /usr/include/glm/mat2x2.hpp \
   /usr/include/glm/mat2x3.hpp \
@@ -655,6 +704,8 @@ CMakeFiles/Light_study.dir/src/main.cpp.o: /home/artur/OpenGL_study/OpenGL/src/m
   /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
   /usr/include/sys/cdefs.h \
   /usr/include/sys/select.h \
   /usr/include/sys/single_threaded.h \
@@ -1257,8 +1308,6 @@ CMakeFiles/Light_study.dir/src/config/config.cpp.o:
 
 /usr/lib32/libGLdispatch.so.0:
 
-/usr/lib32/libGLX.so.0:
-
 /usr/lib/libmvec.so.1:
 
 /usr/lib/libglfw.so.3.4:
@@ -1266,10 +1315,6 @@ CMakeFiles/Light_study.dir/src/config/config.cpp.o:
 /usr/lib/libc.so.6:
 
 /usr/lib/libXrender.so.1:
-
-/usr/lib/libXext.so.6:
-
-/usr/lib/libXdmcp.so.6:
 
 /usr/lib/libGLdispatch.so.0:
 
@@ -1309,8 +1354,6 @@ CMakeFiles/Light_study.dir/src/config/config.cpp.o:
 
 /usr/include/linux/limits.h:
 
-/usr/include/glm/vector_relational.hpp:
-
 /usr/include/glm/vec3.hpp:
 
 /usr/include/glm/vec2.hpp:
@@ -1318,8 +1361,6 @@ CMakeFiles/Light_study.dir/src/config/config.cpp.o:
 /usr/lib/crti.o:
 
 /usr/include/glm/trigonometric.hpp:
-
-/usr/include/glm/simd/platform.h:
 
 /usr/include/glm/packing.hpp:
 
@@ -1333,21 +1374,35 @@ CMakeFiles/Light_study.dir/src/config/config.cpp.o:
 
 /usr/include/glm/integer.hpp:
 
+/usr/include/glm/gtc/vec1.hpp:
+
+/usr/include/glm/gtc/quaternion.hpp:
+
+/usr/include/glm/simd/platform.h:
+
+/usr/include/glm/gtc/matrix_transform.hpp:
+
+/usr/include/glm/gtc/epsilon.inl:
+
 /usr/include/glm/geometric.hpp:
 
 /usr/include/glm/fwd.hpp:
 
 /usr/include/glm/ext/vector_uint2.hpp:
 
+/usr/include/glm/ext/vector_uint1.hpp:
+
+/usr/include/glm/ext/vector_relational.inl:
+
 /usr/include/glm/ext/vector_int4_sized.hpp:
 
 /usr/include/glm/ext/vector_int4.hpp:
 
-/usr/lib/libm.so.6:
-
-/usr/include/glm/ext/vector_int3.hpp:
-
 /usr/include/glm/ext/vector_int2_sized.hpp:
+
+/usr/include/glm/ext/vector_int1_sized.hpp:
+
+/usr/include/glm/ext/vector_int1.hpp:
 
 /usr/include/glm/ext/vector_float4_precision.hpp:
 
@@ -1359,15 +1414,23 @@ CMakeFiles/Light_study.dir/src/config/config.cpp.o:
 
 /usr/include/glm/ext/vector_float3.hpp:
 
+/usr/include/glm/ext/vector_relational.hpp:
+
 /usr/include/glm/ext/vector_float2_precision.hpp:
+
+/usr/include/glm/ext/vector_uint1_sized.hpp:
 
 /usr/include/glm/ext/vector_float2.hpp:
 
 /usr/include/glm/ext/vector_double4_precision.hpp:
 
-/usr/include/glm/ext/vector_double3_precision.hpp:
+/usr/lib/libm.so.6:
 
-/usr/include/glm/ext/vector_double3.hpp:
+/usr/include/glm/ext/vector_int3.hpp:
+
+/usr/include/glm/ext/vector_double1_precision.hpp:
+
+/usr/include/glm/ext/vector_double1.hpp:
 
 /usr/include/glm/matrix.hpp:
 
@@ -1377,7 +1440,45 @@ CMakeFiles/Light_study.dir/src/config/config.cpp.o:
 
 /usr/include/glm/ext/vector_bool2.hpp:
 
+/usr/lib/libXext.so.6:
+
+/usr/include/glm/ext/vector_bool1.hpp:
+
 /usr/include/glm/ext/scalar_uint_sized.hpp:
+
+/usr/include/glm/ext/scalar_constants.inl:
+
+/usr/include/glm/ext/scalar_constants.hpp:
+
+/usr/include/glm/ext/quaternion_trigonometric.inl:
+
+/usr/include/glm/ext/quaternion_trigonometric.hpp:
+
+/usr/include/glm/ext/quaternion_transform.inl:
+
+/usr/include/glm/ext/quaternion_transform.hpp:
+
+/usr/include/glm/ext/quaternion_geometric.inl:
+
+/usr/include/glm/ext/vector_double3.hpp:
+
+/usr/include/glm/ext/quaternion_float_precision.hpp:
+
+/usr/include/glm/ext/quaternion_double_precision.hpp:
+
+/usr/include/glm/ext/vector_double3_precision.hpp:
+
+/usr/include/glm/ext/quaternion_common.hpp:
+
+/usr/lib32/libGLX.so.0:
+
+/usr/include/glm/ext/matrix_transform.hpp:
+
+/usr/include/glm/ext/matrix_projection.inl:
+
+/usr/lib/libXdmcp.so.6:
+
+/usr/include/glm/ext/matrix_projection.hpp:
 
 /usr/include/glm/ext/matrix_float4x4_precision.hpp:
 
@@ -1395,6 +1496,8 @@ CMakeFiles/Light_study.dir/src/config/config.cpp.o:
 
 /usr/include/glm/ext/matrix_float3x3_precision.hpp:
 
+/usr/include/glm/ext/matrix_transform.inl:
+
 /usr/include/glm/ext/matrix_float3x3.hpp:
 
 /usr/include/glm/ext/matrix_float3x2_precision.hpp:
@@ -1411,11 +1514,15 @@ CMakeFiles/Light_study.dir/src/config/config.cpp.o:
 
 /usr/include/glm/ext/matrix_float2x2.hpp:
 
+/usr/include/glm/ext/quaternion_common.inl:
+
 /usr/include/glm/ext/matrix_double4x4_precision.hpp:
 
 /usr/include/glm/ext/matrix_double4x3_precision.hpp:
 
 /usr/include/glm/ext/matrix_double4x2_precision.hpp:
+
+/usr/include/glm/gtc/type_ptr.inl:
 
 /usr/include/glm/ext/matrix_double4x2.hpp:
 
@@ -1435,6 +1542,8 @@ CMakeFiles/Light_study.dir/src/config/config.cpp.o:
 
 /usr/include/glm/ext/matrix_double2x2.hpp:
 
+/usr/include/glm/ext/matrix_clip_space.hpp:
+
 /usr/include/glm/exponential.hpp:
 
 /usr/include/glm/detail/type_vec4.inl:
@@ -1442,6 +1551,8 @@ CMakeFiles/Light_study.dir/src/config/config.cpp.o:
 /usr/lib/libc_nonshared.a:
 
 /usr/include/glm/detail/type_vec2.inl:
+
+/usr/include/glm/detail/type_quat.hpp:
 
 /usr/include/glm/detail/type_mat4x4.inl:
 
@@ -1471,6 +1582,12 @@ CMakeFiles/Light_study.dir/src/glad.c.o:
 
 /usr/include/glm/detail/type_half.hpp:
 
+/usr/include/glm/vector_relational.hpp:
+
+/usr/include/glm/detail/type_float.hpp:
+
+/usr/include/glm/gtc/matrix_transform.inl:
+
 /usr/include/glm/detail/type_mat2x3.hpp:
 
 /usr/include/glm/detail/qualifier.hpp:
@@ -1489,6 +1606,8 @@ CMakeFiles/Light_study.dir/src/glad.c.o:
 
 /usr/include/bits/floatn-common.h:
 
+/usr/include/glm/ext/quaternion_double.hpp:
+
 /usr/include/c++/15.1.1/bits/stl_iterator.h:
 
 /usr/lib/libxcb.so.1:
@@ -1496,6 +1615,8 @@ CMakeFiles/Light_study.dir/src/glad.c.o:
 /usr/include/bits/endian.h:
 
 /usr/include/glm/vec4.hpp:
+
+/usr/include/glm/ext/quaternion_relational.hpp:
 
 /usr/include/glm/ext/matrix_double2x4_precision.hpp:
 
@@ -1555,7 +1676,13 @@ CMakeFiles/Light_study.dir/src/glad.c.o:
 
 /usr/include/c++/15.1.1/bits/charconv.h:
 
+/usr/include/glm/detail/compute_common.hpp:
+
+/usr/include/strings.h:
+
 /usr/include/glm/mat4x4.hpp:
+
+/usr/include/glm/ext/quaternion_float.hpp:
 
 /usr/include/c++/15.1.1/bits/basic_ios.h:
 
@@ -1589,6 +1716,8 @@ CMakeFiles/Light_study.dir/src/glad.c.o:
 
 /usr/include/c++/15.1.1/backward/binders.h:
 
+/usr/include/glm/ext/vector_float1.hpp:
+
 /usr/include/bits/wctype-wchar.h:
 
 /usr/include/sys/types.h:
@@ -1616,6 +1745,8 @@ CMakeFiles/Light_study.dir/src/glad.c.o:
 /usr/include/bits/types/struct_tm.h:
 
 /usr/include/bits/types/struct_timespec.h:
+
+/usr/include/glm/ext/quaternion_relational.inl:
 
 /usr/include/c++/15.1.1/clocale:
 
@@ -1661,6 +1792,8 @@ CMakeFiles/Light_study.dir/src/glad.c.o:
 
 /usr/include/c++/15.1.1/bits/postypes.h:
 
+/usr/include/glm/ext/quaternion_geometric.hpp:
+
 /usr/include/glm/ext/matrix_float3x4.hpp:
 
 /usr/include/c++/15.1.1/bits/locale_classes.tcc:
@@ -1688,6 +1821,8 @@ CMakeFiles/Light_study.dir/src/glad.c.o:
 /usr/include/bits/typesizes.h:
 
 /usr/include/bits/struct_mutex.h:
+
+/usr/include/glm/gtc/constants.inl:
 
 /home/artur/OpenGL_study/OpenGL/include/KHR/khrplatform.h:
 
@@ -1759,6 +1894,8 @@ CMakeFiles/Light_study.dir/src/glad.c.o:
 
 /usr/include/bits/fp-logb.h:
 
+/usr/include/glm/gtc/constants.hpp:
+
 /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/error_constants.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/limits.h:
@@ -1771,11 +1908,15 @@ CMakeFiles/Light_study.dir/src/glad.c.o:
 
 /usr/include/asm-generic/posix_types.h:
 
+/usr/include/glm/gtc/epsilon.hpp:
+
 /usr/include/glm/ext/matrix_float2x2_precision.hpp:
 
 /usr/include/stdc-predef.h:
 
 /usr/lib/libc.so:
+
+/usr/include/glm/ext/vector_bool1_precision.hpp:
 
 /usr/include/bits/pthreadtypes.h:
 
@@ -1909,6 +2050,8 @@ CMakeFiles/Light_study.dir/src/glad.c.o:
 
 /usr/include/c++/15.1.1/iostream:
 
+/usr/include/glm/ext/vector_float1_precision.hpp:
+
 /usr/include/c++/15.1.1/cctype:
 
 /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/atomic_word.h:
@@ -1938,6 +2081,8 @@ CMakeFiles/Light_study.dir/src/glad.c.o:
 /usr/include/c++/15.1.1/ext/alloc_traits.h:
 
 /usr/include/c++/15.1.1/ext/string_conversions.h:
+
+/usr/include/glm/ext/matrix_clip_space.inl:
 
 /usr/include/glm/detail/setup.hpp:
 
@@ -1971,6 +2116,8 @@ CMakeFiles/Light_study.dir/src/glad.c.o:
 
 /usr/include/c++/15.1.1/typeinfo:
 
+/usr/include/glm/gtc/type_ptr.hpp:
+
 /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/c++allocator.h:
 
 /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/ctype_inline.h:
@@ -1984,6 +2131,8 @@ CMakeFiles/Light_study.dir/src/glad.c.o:
 /usr/include/stdlib.h:
 
 /usr/include/errno.h:
+
+/usr/include/glm/detail/type_quat.inl:
 
 /usr/include/features-time64.h:
 
@@ -2012,6 +2161,8 @@ CMakeFiles/Light_study.dir/src/glad.c.o:
 /usr/include/c++/15.1.1/bits/memoryfwd.h:
 
 /usr/include/locale.h:
+
+/usr/include/glm/gtc/quaternion.inl:
 
 /usr/include/pthread.h:
 
@@ -2105,6 +2256,8 @@ CMakeFiles/Light_study.dir/src/glad.c.o:
 
 /usr/include/c++/15.1.1/cstdint:
 
+/usr/include/c++/15.1.1/cstring:
+
 /usr/include/bits/types/__fpos_t.h:
 
 /usr/include/c++/15.1.1/tr1/beta_function.tcc:
@@ -2128,7 +2281,3 @@ CMakeFiles/Light_study.dir/src/glad.c.o:
 /usr/include/c++/15.1.1/tr1/poly_laguerre.tcc:
 
 /usr/include/c++/15.1.1/tr1/special_function_util.h:
-
-/usr/include/strings.h:
-
-/usr/include/glm/detail/compute_common.hpp:

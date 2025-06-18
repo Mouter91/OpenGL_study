@@ -3,6 +3,10 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
+#include <iostream>
+
+#include "stb_image.h"
+
 namespace WindowConfig {
 inline constexpr unsigned int width = 800;
 inline constexpr unsigned int height = 600;
@@ -38,3 +42,5 @@ class InputHandler {
  private:
   GLFWwindow* window;
 };
+
+GLuint LoadTexture(const std::string& path);

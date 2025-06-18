@@ -13,7 +13,10 @@ add_executable(Light_study
     src/main.cpp
     src/glad.c
     src/config/config.h
+    src/config/config.cpp
     src/shader/shader.cpp
+    src/stb_image.h
+    src/stb_image.cpp
 )
 
 target_include_directories(Light_study PRIVATE

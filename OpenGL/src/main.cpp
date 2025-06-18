@@ -1,8 +1,6 @@
 #include "config/config.h"
 #include "shader/shader.h"
 
-#include <iostream>
-
 int main() {
   glfwInit();
   glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -31,9 +29,17 @@ int main() {
   Shader shader_program("../src/shader/vertex.sh", "../src/shader/fragment.sh");
 
   float vertices[] = {
-      -0.5f, -0.5f, 0.0f,  // левая вершина
-      0.5f,  -0.5f, 0.0f,  // правая вершина
-      0.0f,  0.5f,  0.0f   // верхняя вершина
+      // координаты        // цвета            // текстурные координаты
+      0.5f,  0.5f,  0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f,  // верхняя правая
+      0.5f,  -0.5f, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f,  // нижняя правая
+      -0.5f, -0.5f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f,  // нижняя левая
+      -0.5f, 0.5f,  0.0f, 1.0f, 1.0f, 0.0f, 0.0f, 1.0f   // верхняя левая
+  };
+
+  unsigned int indices[] = {
+      // помните, что мы начинаем с 0!
+      0, 1, 3,  // первый треугольник
+      1, 2, 3   // второй треугольник
   };
 
   GLuint VBO, VAO;
@@ -45,12 +51,35 @@ int main() {
   glBindBuffer(GL_ARRAY_BUFFER, VBO);
   glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
-  glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void *)0);
+  GLuint EBO;
+  glGenBuffers(1, &EBO);
+
+  glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+  glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
+
+  // Координатные атрибуты
+  glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void *)0);
   glEnableVertexAttribArray(0);
+
+  // Цветовые атрибуты
+  glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void *)(3 * sizeof(float)));
+  glEnableVertexAttribArray(1);
+
+  // Текстурные атрибуты
+  glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void *)(6 * sizeof(float)));
+  glEnableVertexAttribArray(2);
 
   glBindBuffer(GL_ARRAY_BUFFER, 0);
 
   glBindVertexArray(0);
+
+  GLuint texture1 = LoadTexture("../src/texture/wooden_container.jpg");
+  GLuint texture2 = LoadTexture("../src/texture/awesomeface.png");
+
+  shader_program.use();
+
+  glUniform1i(glGetUniformLocation(shader_program.GetID(), "texture1"), 0);
+  shader_program.setInt("texture2", 1);
 
   // Раскомментируйте следующую строку для отрисовки полигонов в режиме каркаса
   // glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
@@ -61,9 +90,16 @@ int main() {
     glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
 
+    glActiveTexture(GL_TEXTURE0);
+    glBindTexture(GL_TEXTURE_2D, texture1);
+    glActiveTexture(GL_TEXTURE1);
+    glBindTexture(GL_TEXTURE_2D, texture2);
+
     shader_program.use();
+
     glBindVertexArray(VAO);
-    glDrawArrays(GL_TRIANGLES, 0, 3);
+    glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+    // glDrawArrays(GL_TRIANGLES, 0, 3);
 
     glfwSwapBuffers(window);
     glfwPollEvents();
@@ -71,6 +107,7 @@ int main() {
 
   glDeleteVertexArrays(1, &VAO);
   glDeleteBuffers(1, &VBO);
+  glDeleteBuffers(1, &EBO);
 
   glfwTerminate();
 

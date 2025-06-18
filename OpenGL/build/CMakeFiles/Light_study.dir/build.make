@@ -100,10 +100,24 @@ CMakeFiles/Light_study.dir/src/glad.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Light_study.dir/src/glad.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/artur/OpenGL_study/OpenGL/src/glad.c -o CMakeFiles/Light_study.dir/src/glad.c.s
 
+CMakeFiles/Light_study.dir/src/config/config.cpp.o: CMakeFiles/Light_study.dir/flags.make
+CMakeFiles/Light_study.dir/src/config/config.cpp.o: /home/artur/OpenGL_study/OpenGL/src/config/config.cpp
+CMakeFiles/Light_study.dir/src/config/config.cpp.o: CMakeFiles/Light_study.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/artur/OpenGL_study/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Light_study.dir/src/config/config.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Light_study.dir/src/config/config.cpp.o -MF CMakeFiles/Light_study.dir/src/config/config.cpp.o.d -o CMakeFiles/Light_study.dir/src/config/config.cpp.o -c /home/artur/OpenGL_study/OpenGL/src/config/config.cpp
+
+CMakeFiles/Light_study.dir/src/config/config.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Light_study.dir/src/config/config.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/artur/OpenGL_study/OpenGL/src/config/config.cpp > CMakeFiles/Light_study.dir/src/config/config.cpp.i
+
+CMakeFiles/Light_study.dir/src/config/config.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Light_study.dir/src/config/config.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/artur/OpenGL_study/OpenGL/src/config/config.cpp -o CMakeFiles/Light_study.dir/src/config/config.cpp.s
+
 CMakeFiles/Light_study.dir/src/shader/shader.cpp.o: CMakeFiles/Light_study.dir/flags.make
 CMakeFiles/Light_study.dir/src/shader/shader.cpp.o: /home/artur/OpenGL_study/OpenGL/src/shader/shader.cpp
 CMakeFiles/Light_study.dir/src/shader/shader.cpp.o: CMakeFiles/Light_study.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/artur/OpenGL_study/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Light_study.dir/src/shader/shader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/artur/OpenGL_study/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Light_study.dir/src/shader/shader.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Light_study.dir/src/shader/shader.cpp.o -MF CMakeFiles/Light_study.dir/src/shader/shader.cpp.o.d -o CMakeFiles/Light_study.dir/src/shader/shader.cpp.o -c /home/artur/OpenGL_study/OpenGL/src/shader/shader.cpp
 
 CMakeFiles/Light_study.dir/src/shader/shader.cpp.i: cmake_force
@@ -114,23 +128,41 @@ CMakeFiles/Light_study.dir/src/shader/shader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Light_study.dir/src/shader/shader.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/artur/OpenGL_study/OpenGL/src/shader/shader.cpp -o CMakeFiles/Light_study.dir/src/shader/shader.cpp.s
 
+CMakeFiles/Light_study.dir/src/stb_image.cpp.o: CMakeFiles/Light_study.dir/flags.make
+CMakeFiles/Light_study.dir/src/stb_image.cpp.o: /home/artur/OpenGL_study/OpenGL/src/stb_image.cpp
+CMakeFiles/Light_study.dir/src/stb_image.cpp.o: CMakeFiles/Light_study.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/artur/OpenGL_study/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Light_study.dir/src/stb_image.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Light_study.dir/src/stb_image.cpp.o -MF CMakeFiles/Light_study.dir/src/stb_image.cpp.o.d -o CMakeFiles/Light_study.dir/src/stb_image.cpp.o -c /home/artur/OpenGL_study/OpenGL/src/stb_image.cpp
+
+CMakeFiles/Light_study.dir/src/stb_image.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Light_study.dir/src/stb_image.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/artur/OpenGL_study/OpenGL/src/stb_image.cpp > CMakeFiles/Light_study.dir/src/stb_image.cpp.i
+
+CMakeFiles/Light_study.dir/src/stb_image.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Light_study.dir/src/stb_image.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/artur/OpenGL_study/OpenGL/src/stb_image.cpp -o CMakeFiles/Light_study.dir/src/stb_image.cpp.s
+
 # Object files for target Light_study
 Light_study_OBJECTS = \
 "CMakeFiles/Light_study.dir/src/main.cpp.o" \
 "CMakeFiles/Light_study.dir/src/glad.c.o" \
-"CMakeFiles/Light_study.dir/src/shader/shader.cpp.o"
+"CMakeFiles/Light_study.dir/src/config/config.cpp.o" \
+"CMakeFiles/Light_study.dir/src/shader/shader.cpp.o" \
+"CMakeFiles/Light_study.dir/src/stb_image.cpp.o"
 
 # External object files for target Light_study
 Light_study_EXTERNAL_OBJECTS =
 
 Light_study: CMakeFiles/Light_study.dir/src/main.cpp.o
 Light_study: CMakeFiles/Light_study.dir/src/glad.c.o
+Light_study: CMakeFiles/Light_study.dir/src/config/config.cpp.o
 Light_study: CMakeFiles/Light_study.dir/src/shader/shader.cpp.o
+Light_study: CMakeFiles/Light_study.dir/src/stb_image.cpp.o
 Light_study: CMakeFiles/Light_study.dir/build.make
 Light_study: CMakeFiles/Light_study.dir/compiler_depend.ts
 Light_study: /usr/lib/libglfw.so.3.4
 Light_study: CMakeFiles/Light_study.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/artur/OpenGL_study/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Light_study"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/artur/OpenGL_study/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Light_study"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Light_study.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

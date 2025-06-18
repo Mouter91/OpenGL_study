@@ -13,8 +13,20 @@
 },
 {
   "directory": "/home/artur/OpenGL_study/OpenGL/build",
+  "command": "/usr/bin/c++  -I/home/artur/OpenGL_study/OpenGL/include -I/home/artur/OpenGL_study/OpenGL/src -std=gnu++17 -o CMakeFiles/Light_study.dir/src/config/config.cpp.o -c /home/artur/OpenGL_study/OpenGL/src/config/config.cpp",
+  "file": "/home/artur/OpenGL_study/OpenGL/src/config/config.cpp",
+  "output": "CMakeFiles/Light_study.dir/src/config/config.cpp.o"
+},
+{
+  "directory": "/home/artur/OpenGL_study/OpenGL/build",
   "command": "/usr/bin/c++  -I/home/artur/OpenGL_study/OpenGL/include -I/home/artur/OpenGL_study/OpenGL/src -std=gnu++17 -o CMakeFiles/Light_study.dir/src/shader/shader.cpp.o -c /home/artur/OpenGL_study/OpenGL/src/shader/shader.cpp",
   "file": "/home/artur/OpenGL_study/OpenGL/src/shader/shader.cpp",
   "output": "CMakeFiles/Light_study.dir/src/shader/shader.cpp.o"
+},
+{
+  "directory": "/home/artur/OpenGL_study/OpenGL/build",
+  "command": "/usr/bin/c++  -I/home/artur/OpenGL_study/OpenGL/include -I/home/artur/OpenGL_study/OpenGL/src -std=gnu++17 -o CMakeFiles/Light_study.dir/src/stb_image.cpp.o -c /home/artur/OpenGL_study/OpenGL/src/stb_image.cpp",
+  "file": "/home/artur/OpenGL_study/OpenGL/src/stb_image.cpp",
+  "output": "CMakeFiles/Light_study.dir/src/stb_image.cpp.o"
 }
 ]

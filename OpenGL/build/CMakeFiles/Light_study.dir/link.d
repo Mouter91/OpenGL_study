@@ -4,7 +4,9 @@ Light_study: \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/crtbeginS.o \
   CMakeFiles/Light_study.dir/src/main.cpp.o \
   CMakeFiles/Light_study.dir/src/glad.c.o \
+  CMakeFiles/Light_study.dir/src/config/config.cpp.o \
   CMakeFiles/Light_study.dir/src/shader/shader.cpp.o \
+  CMakeFiles/Light_study.dir/src/stb_image.cpp.o \
   /usr/lib/libglfw.so.3.4 \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/../../../../lib/libGL.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/../../../../lib/libX11.so \
@@ -63,7 +65,11 @@ CMakeFiles/Light_study.dir/src/main.cpp.o:
 
 CMakeFiles/Light_study.dir/src/glad.c.o:
 
+CMakeFiles/Light_study.dir/src/config/config.cpp.o:
+
 CMakeFiles/Light_study.dir/src/shader/shader.cpp.o:
+
+CMakeFiles/Light_study.dir/src/stb_image.cpp.o:
 
 /usr/lib/libglfw.so.3.4:
 

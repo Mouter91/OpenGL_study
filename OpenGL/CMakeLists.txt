@@ -17,6 +17,7 @@ add_executable(Light_study
     src/shader/shader.cpp
     src/stb_image.h
     src/stb_image.cpp
+    src/camera/camera.h
 )
 
 target_include_directories(Light_study PRIVATE

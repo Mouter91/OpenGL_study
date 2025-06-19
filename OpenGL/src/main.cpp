@@ -107,6 +107,39 @@ int main() {
   Camera camera;
   key_bind.BindCamera(&camera);
 
+  glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+  glfwSetWindowUserPointer(window, &camera);
+
+  glfwSetCursorPosCallback(window, [](GLFWwindow *win, double xpos, double ypos) {
+    static bool firstMouse = true;
+    static float lastX = static_cast<float>(WindowConfig::width) / 2,
+                 lastY = static_cast<float>(WindowConfig::height) / 2;
+
+    if (firstMouse) {
+      lastX = xpos;
+      lastY = ypos;
+      firstMouse = false;
+    }
+
+    float xoffset = xpos - lastX;
+    float yoffset = lastY - ypos;  // y координата перевернута
+
+    lastX = xpos;
+    lastY = ypos;
+
+    auto *cam = static_cast<Camera *>(glfwGetWindowUserPointer(win));
+    if (cam) {
+      cam->ProcessMouseMovement(xoffset, yoffset);
+    }
+  });
+
+  glfwSetScrollCallback(window, [](GLFWwindow *win, double xoffset, double yoffset) {
+    auto *cam = static_cast<Camera *>(glfwGetWindowUserPointer(win));
+    if (cam) {
+      cam->ProcessMouseScroll(yoffset);
+    }
+  });
+
   // Раскомментируйте следующую строку для отрисовки полигонов в режиме каркаса
   // glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
@@ -147,7 +180,7 @@ int main() {
 
     glm::mat4 projection = glm::mat4(1.0f);
     projection =
-        glm::perspective(glm::radians(45.0f),
+        glm::perspective(glm::radians(camera.GetZoom()),
                          (float)WindowConfig::width / (float)WindowConfig::height, 0.1f, 100.0f);
 
     GLuint viewLoc = glGetUniformLocation(shader_program.GetID(), "view");

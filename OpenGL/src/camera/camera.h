@@ -36,6 +36,10 @@ class Camera {
     return zoom;
   }
 
+  const glm::vec3 GetPosition() const {
+    return cameraPos;
+  }
+
   void ProcessKeyboard(Movement direction, float deltaTime) {
     float velocity = cameraSpeed * deltaTime;
     if (direction == Movement::FORWARD)

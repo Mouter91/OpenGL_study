@@ -147,8 +147,8 @@ int main() {
                                glm::vec3(1.3f, -2.0f, -2.5f),  glm::vec3(1.5f, 2.0f, -2.5f),
                                glm::vec3(1.5f, 0.2f, -1.5f),   glm::vec3(-1.3f, 1.0f, -1.5f)};
 
-  // Раскомментируйте следующую строку для отрисовки полигонов в режиме каркаса
-  // glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+  glm::vec3 pointLightPositions[] = {glm::vec3(0.7f, 0.2f, 2.0f), glm::vec3(2.3f, -3.3f, -4.0f),
+                                     glm::vec3(-4.0f, 2.0f, -12.0f), glm::vec3(0.0f, 0.0f, -3.0f)};
 
   while (!glfwWindowShouldClose(window)) {
     float currentFrame = glfwGetTime();
@@ -164,19 +164,59 @@ int main() {
     // Отрисовка куба
     lightingShader.use();
 
-    lightingShader.setVec3("light.position", camera.GetPosition());
-    lightingShader.setVec3("light.direction", camera.GetFrontDirection());
-    lightingShader.setFloat("light.cutOff", glm::cos(glm::radians(12.5f)));
-    lightingShader.setFloat("light.outerCutOff", glm::cos(glm::radians(17.5f)));
-    lightingShader.setVec3("viewPos", camera.GetPosition());
+    // Направленный свет
+    lightingShader.setVec3("dirLight.direction", -0.2f, -1.0f, -0.3f);
+    lightingShader.setVec3("dirLight.ambient", 0.05f, 0.05f, 0.05f);
+    lightingShader.setVec3("dirLight.diffuse", 0.4f, 0.4f, 0.4f);
+    lightingShader.setVec3("dirLight.specular", 0.5f, 0.5f, 0.5f);
 
-    // Свойства света
-    lightingShader.setVec3("light.ambient", 0.1f, 0.1f, 0.1f);
-    lightingShader.setVec3("light.diffuse", 0.8f, 0.8f, 0.8f);
-    lightingShader.setVec3("light.specular", 1.0f, 1.0f, 1.0f);
-    lightingShader.setFloat("light.constant", 1.0f);
-    lightingShader.setFloat("light.linear", 0.09f);
-    lightingShader.setFloat("light.quadratic", 0.032f);
+    // Точечный источник света №1
+    lightingShader.setVec3("pointLights[0].position", pointLightPositions[0]);
+    lightingShader.setVec3("pointLights[0].ambient", 0.05f, 0.05f, 0.05f);
+    lightingShader.setVec3("pointLights[0].diffuse", 0.8f, 0.8f, 0.8f);
+    lightingShader.setVec3("pointLights[0].specular", 1.0f, 1.0f, 1.0f);
+    lightingShader.setFloat("pointLights[0].constant", 1.0f);
+    lightingShader.setFloat("pointLights[0].linear", 0.09);
+    lightingShader.setFloat("pointLights[0].quadratic", 0.032);
+
+    // Точечный источник света №2
+    lightingShader.setVec3("pointLights[1].position", pointLightPositions[1]);
+    lightingShader.setVec3("pointLights[1].ambient", 0.05f, 0.05f, 0.05f);
+    lightingShader.setVec3("pointLights[1].diffuse", 0.8f, 0.8f, 0.8f);
+    lightingShader.setVec3("pointLights[1].specular", 1.0f, 1.0f, 1.0f);
+    lightingShader.setFloat("pointLights[1].constant", 1.0f);
+    lightingShader.setFloat("pointLights[1].linear", 0.09);
+    lightingShader.setFloat("pointLights[1].quadratic", 0.032);
+
+    // Точечный источник света №3
+    lightingShader.setVec3("pointLights[2].position", pointLightPositions[2]);
+    lightingShader.setVec3("pointLights[2].ambient", 0.05f, 0.05f, 0.05f);
+    lightingShader.setVec3("pointLights[2].diffuse", 0.8f, 0.8f, 0.8f);
+    lightingShader.setVec3("pointLights[2].specular", 1.0f, 1.0f, 1.0f);
+    lightingShader.setFloat("pointLights[2].constant", 1.0f);
+    lightingShader.setFloat("pointLights[2].linear", 0.09);
+    lightingShader.setFloat("pointLights[2].quadratic", 0.032);
+
+    // Точечный источник света №4
+    lightingShader.setVec3("pointLights[3].position", pointLightPositions[3]);
+    lightingShader.setVec3("pointLights[3].ambient", 0.05f, 0.05f, 0.05f);
+    lightingShader.setVec3("pointLights[3].diffuse", 0.8f, 0.8f, 0.8f);
+    lightingShader.setVec3("pointLights[3].specular", 1.0f, 1.0f, 1.0f);
+    lightingShader.setFloat("pointLights[3].constant", 1.0f);
+    lightingShader.setFloat("pointLights[3].linear", 0.09);
+    lightingShader.setFloat("pointLights[3].quadratic", 0.032);
+
+    // Прожектор
+    lightingShader.setVec3("spotLight.position", camera.GetPosition());
+    lightingShader.setVec3("spotLight.direction", camera.GetFrontDirection());
+    lightingShader.setVec3("spotLight.ambient", 0.0f, 0.0f, 0.0f);
+    lightingShader.setVec3("spotLight.diffuse", 1.0f, 1.0f, 1.0f);
+    lightingShader.setVec3("spotLight.specular", 1.0f, 1.0f, 1.0f);
+    lightingShader.setFloat("spotLight.constant", 1.0f);
+    lightingShader.setFloat("spotLight.linear", 0.09);
+    lightingShader.setFloat("spotLight.quadratic", 0.032);
+    lightingShader.setFloat("spotLight.cutOff", glm::cos(glm::radians(12.5f)));
+    lightingShader.setFloat("spotLight.outerCutOff", glm::cos(glm::radians(15.0f)));
 
     // Свойства материалов
     lightingShader.setVec3("material.specular", 0.5f, 0.5f, 0.5f);
@@ -214,16 +254,19 @@ int main() {
     }
 
     // Отрисовка лампочки
-    /* lampShader.use();
-     lampShader.setMat4("projection", projection);
-     lampShader.setMat4("view", view);
-     model = glm::mat4(1.0f);
-     model = glm::translate(model, lightPos);
-     model = glm::scale(model, glm::vec3(0.2f));  // куб меньшего размера
-     lampShader.setMat4("model", model);
+    lampShader.use();
+    lampShader.setMat4("projection", projection);
+    lampShader.setMat4("view", view);
 
-     glBindVertexArray(lightVAO);
-     glDrawArrays(GL_TRIANGLES, 0, 36);*/
+    glBindVertexArray(lightVAO);
+    for (unsigned int i = 0; i < 4; i++) {
+      model = glm::mat4(1.0f);
+      model = glm::translate(model, pointLightPositions[i]);
+      model = glm::scale(model, glm::vec3(0.2f));  // куб меньшего размера
+      lampShader.setMat4("model", model);
+
+      glDrawArrays(GL_TRIANGLES, 0, 36);
+    }
 
     glfwSwapBuffers(window);
     glfwPollEvents();

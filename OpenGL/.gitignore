@@ -1,0 +1,7 @@
+# Папки сборки
+/build/
+*/build/
+x64/
+Debug/
+Release/
+

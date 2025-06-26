@@ -9,8 +9,8 @@ class Shader {
   Shader(const char* vertexPath, const char* fragmentPath);
   ~Shader();
 
-  Shader(const Shader&) = delete;
-  Shader& operator=(const Shader&) = delete;
+  Shader(const Shader& other) = default;
+  Shader& operator=(const Shader& other) = default;
 
   Shader(Shader&& other) noexcept;
   Shader& operator=(Shader&& other) noexcept;

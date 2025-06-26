@@ -6,8 +6,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 cmake_policy(SET CMP0072 NEW)
+
 find_package(OpenGL REQUIRED)
 find_package(glfw3 REQUIRED)
+find_package(assimp REQUIRED)
 
 add_executable(Light_study
     src/main.cpp
@@ -18,11 +20,16 @@ add_executable(Light_study
     src/stb_image.h
     src/stb_image.cpp
     src/camera/camera.h
+    src/model/model.h
+    src/model/model.cpp
+    src/model/mesh.h
+    src/model/mesh.cpp
 )
 
 target_include_directories(Light_study PRIVATE
     ${CMAKE_SOURCE_DIR}/include
     ${CMAKE_SOURCE_DIR}/src
+    ${ASSIMP_INCLUDE_DIRS}
 )
 
 target_link_libraries(Light_study PRIVATE
@@ -33,5 +40,6 @@ target_link_libraries(Light_study PRIVATE
     Xrandr
     Xi
     dl
+    assimp
 )
 
